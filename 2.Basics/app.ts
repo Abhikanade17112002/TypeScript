@@ -9,7 +9,6 @@ aNumber = "String" // Not Allowed
 let a = true ;
 let b = "Abhishek"
 
-
 //  Referenced
 
 let array = [ 1 ,2 ,3 , "String Is Allowed"] ;
@@ -82,3 +81,31 @@ const crash = (): never => {
 // Uncomment the line below to test never
 // crash(); // ❌ Will crash and stop execution
 
+
+
+
+
+//  Basic Defferance Between Unknown Ans Any Is Tat Unknown Is A Safer Alternatiove TO Any 
+
+let x ;
+x = 12 ;
+x = "Abhishek"
+
+x.toLocaleLowerCase() ; // Ambugity
+
+
+
+let y:unknown ;
+y = 12 ;
+y = "Abhishek"
+
+// y.toLocaleLowerCase() ; // Ambugity Will Be Resolved
+
+if( typeof y == "string" ){  // Required Better Way 
+ console.log("A String");
+ 
+}
+else{
+    console.log("A Number");
+    
+}
